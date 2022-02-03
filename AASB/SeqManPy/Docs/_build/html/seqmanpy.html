@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>seqmanpy module &mdash; SeqManPy 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="final_submission" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> SeqManPy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">final_submission</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">seqmanpy module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SeqManPy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">final_submission</a> &raquo;</li>
+      <li>seqmanpy module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/seqmanpy.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-seqmanpy">
+<span id="seqmanpy-module"></span><h1>seqmanpy module<a class="headerlink" href="#module-seqmanpy" title="Permalink to this headline"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.alinhamento_progressivo">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">alinhamento_progressivo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#seqmanpy.alinhamento_progressivo" title="Permalink to this definition"></a></dt>
+<dd><p>Esta função recebe um lista de sequências e alinha-as progressivamente utilizando a ordem pela qual estão na lista.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Seqs</dt>
+<dd class="field-odd"><p>Lista de sequências, ordenadas de forma decrescente pelo tamanho</p>
+</dd>
+<dt class="field-even">Return seqs</dt>
+<dd class="field-even"><p>Lista de sequências alinhadas progressivamente</p>
+</dd>
+<dt class="field-odd">Rtype seqs</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.alinhamentos">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">alinhamentos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blossum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eqs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diffs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat_print</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seqmanpy.alinhamentos" title="Permalink to this definition"></a></dt>
+<dd><p>Esta função recebe duas sequências e realiza um alinhamento local ou global, conforme escolha do utilizador. É também possivel escolher
+a utilização, ou não, da matriz BLOSSUM para calculo do score ou podem ser passados como argumentos os valores para o calculo do mesmo.</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">s1</dt>
+<dd class="field-odd"><p>Sequência 1</p>
+</dd>
+<dt class="field-even">type s1</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">s2</dt>
+<dd class="field-odd"><p>Sequência 2</p>
+</dd>
+<dt class="field-even">type s2</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">blossum</dt>
+<dd class="field-odd"><p>Matriz BLOSSUM</p>
+</dd>
+<dt class="field-even">type blossum</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+<dt class="field-odd">eqs</dt>
+<dd class="field-odd"><p>Valor do score para bases iguais</p>
+</dd>
+<dt class="field-even">type eqs</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">diffs</dt>
+<dd class="field-odd"><p>Valor do score para bases diferentes</p>
+</dd>
+<dt class="field-even">type diffs</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">g</dt>
+<dd class="field-odd"><p>Valor do score para espaçamento</p>
+</dd>
+<dt class="field-even">type g</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">local</dt>
+<dd class="field-odd"><p>Tipo de alinhamento</p>
+</dd>
+<dt class="field-even">type local</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+<dt class="field-odd">printing</dt>
+<dd class="field-odd"><p>Modo de retorno do output</p>
+</dd>
+<dt class="field-even">type printing</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return matriz int</dt>
+<dd class="field-odd"><p>Matriz com o valor do score</p>
+</dd>
+<dt class="field-even">return matriz traceback</dt>
+<dd class="field-even"><p>Matriz traceback do alinhamento</p>
+</dd>
+<dt class="field-odd">return score alinhamento</dt>
+<dd class="field-odd"><p>Score do alinhamento</p>
+</dd>
+<dt class="field-even">return alinhamento</dt>
+<dd class="field-even"><p>Duas sequências alinhadas</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.codon_to_amino">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">codon_to_amino</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">RNA_seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#seqmanpy.codon_to_amino" title="Permalink to this definition"></a></dt>
+<dd><p>Recebe uma sequencia de RNA e devolve a sequencia de aminoacidos:</p>
+<p>M - codao de iniciacao; _ - codao STOP</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">RNA_seq</dt>
+<dd class="field-odd"><p>Sequência de RNA</p>
+</dd>
+<dt class="field-even">type seq</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">aminoacidos</dt>
+<dd class="field-odd"><p>Sequência de aminoácidos</p>
+</dd>
+<dt class="field-even">rtype aminoacidos</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.complemento_inverso">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">complemento_inverso</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#seqmanpy.complemento_inverso" title="Permalink to this definition"></a></dt>
+<dd><p>Converte uma sequencia de DNA no seu complemento inverso (3’ - 5’)</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">seq</dt>
+<dd class="field-odd"><p>Sequência para conversão</p>
+</dd>
+<dt class="field-even">type seq</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return complemento inverso</dt>
+<dd class="field-odd"><p>Sequência correpondente ao complemento inverso</p>
+</dd>
+<dt class="field-even">rtype complemento inverso</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.dna_rna">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">dna_rna</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#seqmanpy.dna_rna" title="Permalink to this definition"></a></dt>
+<dd><p>Converte uma sequencia de DNA numa sequencia de RNA</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">seq</dt>
+<dd class="field-odd"><p>Sequência para conversão</p>
+</dd>
+<dt class="field-even">type seq</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return rna</dt>
+<dd class="field-odd"><p>Sequência de RNA</p>
+</dd>
+<dt class="field-even">rtype rna</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.dna_rna_amino_erro">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">dna_rna_amino_erro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#seqmanpy.dna_rna_amino_erro" title="Permalink to this definition"></a></dt>
+<dd><p>Recebendo uma sequencia o programa procura validar a mesma como sendo DNA, RNA, Aminoacidos ou um erro (nenhum dos anteriores)</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">seq</dt>
+<dd class="field-odd"><p>Sequência para validação</p>
+</dd>
+<dt class="field-even">type seq</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>Validação DNA, RNA, Aminoacidos ou Erro</p>
+</dd>
+<dt class="field-even">rtype return</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.dotplot">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">dotplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stringency</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seqmanpy.dotplot" title="Permalink to this definition"></a></dt>
+<dd><p>Recebe duas sequencias, window size e stringency e representa as duas sequencias numa matriz de pontos</p>
+<blockquote>
+<div><p>default stringency = 1</p>
+<p>default win_size = -1</p>
+</div></blockquote>
+<dl>
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">seq1</dt>
+<dd class="field-odd"><p>Sequência 1 para alinhar</p>
+</dd>
+<dt class="field-even">type seq1</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">seq2</dt>
+<dd class="field-odd"><p>Sequência 2 para alinhar</p>
+</dd>
+<dt class="field-even">type seq2</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">win_size</dt>
+<dd class="field-odd"><p>Window size (por omissão 1)</p>
+</dd>
+<dt class="field-even">type win_size</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">stringency</dt>
+<dd class="field-odd"><p>Stringency (por omissão 1)</p>
+</dd>
+<dt class="field-even">type stringency</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">printing</dt>
+<dd class="field-odd"><p>Formato do print da função. Se printing = True retorna uma matrix visual, se </p>
+</dd>
+</dl>
+<p>printing = False retorna a matriz em formato lista de listas iterável
+:type printing: boolean</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return dotplot</dt>
+<dd class="field-odd"><p>Matriz dotplot com sequências</p>
+</dd>
+<dt class="field-even">rtype dotplot</dt>
+<dd class="field-even"><p>array</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.get_codons">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">get_codons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DNA_seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#seqmanpy.get_codons" title="Permalink to this definition"></a></dt>
+<dd><p>Recebe uma sequencia de DNA e devolve uma lista dos seus codoes</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">DNA_seq</dt>
+<dd class="field-odd"><p>Sequência de DNA</p>
+</dd>
+<dt class="field-even">type seq</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return</dt>
+<dd class="field-odd"><p>Lista de codões da sequência de DNA</p>
+</dd>
+<dt class="field-even">rtype return</dt>
+<dd class="field-even"><p>List[str]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.get_prots">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">get_prots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DNA_seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#seqmanpy.get_prots" title="Permalink to this definition"></a></dt>
+<dd><p>Recebe uma sequencia de DNA e devolve uma lista com as possiveis proteinas dessa sequencia</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">DNA_seq</dt>
+<dd class="field-odd"><p>Sequência de DNA</p>
+</dd>
+<dt class="field-even">type seq</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return proteinas</dt>
+<dd class="field-odd"><p>Lista de proteínas possiveis para a sequência</p>
+</dd>
+<dt class="field-even">rtype proteinas</dt>
+<dd class="field-even"><p>List[str]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.pssm">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">pssm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista_seqs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pseudo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seqmanpy.pssm" title="Permalink to this definition"></a></dt>
+<dd><p>Funcao que recebe uma lista de sequencias de tamanho igual e a pseudocontagem (pseudo). Devolve o perfil PSSM das mesmas.</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">lista_seqs</dt>
+<dd class="field-odd"><p>Lista de sequências</p>
+</dd>
+<dt class="field-even">type lista_seqs</dt>
+<dd class="field-even"><p>List[str]</p>
+</dd>
+<dt class="field-odd">pseudo</dt>
+<dd class="field-odd"><p>Valor da pseudocontagem do PSSM (por omissão 0)</p>
+</dd>
+<dt class="field-even">type pseudo</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return PSSM</dt>
+<dd class="field-odd"><p>PSSM das sequências</p>
+</dd>
+<dt class="field-even">rtype PSSM</dt>
+<dd class="field-even"><p>array</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.pwm">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">pwm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista_seqs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pseudo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seqmanpy.pwm" title="Permalink to this definition"></a></dt>
+<dd><p>Funcao que recebe uma lista de sequencias de tamanho igual o valor da pseucocontagem e o tipo de printing desejado. Devolve o perfil PWM das mesmas.</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">lista_seqs</dt>
+<dd class="field-odd"><p>Lista de sequências</p>
+</dd>
+<dt class="field-even">type lista_seqs</dt>
+<dd class="field-even"><p>List[str]</p>
+</dd>
+<dt class="field-odd">pseudo</dt>
+<dd class="field-odd"><p>Valor da pseudocontagem do PWM (por omissão 0)</p>
+</dd>
+<dt class="field-even">type pseudo</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">printing</dt>
+<dd class="field-odd"><p>Modo de retorno da matriz</p>
+</dd>
+<dt class="field-even">type printing</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return PWM</dt>
+<dd class="field-odd"><p>PWM das sequências</p>
+</dd>
+<dt class="field-even">rtype PWM</dt>
+<dd class="field-even"><p>array</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.rna_dna">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">rna_dna</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#seqmanpy.rna_dna" title="Permalink to this definition"></a></dt>
+<dd><p>Converte uma sequencia de RNA numa sequencia de DNA</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">seq</dt>
+<dd class="field-odd"><p>Sequência para conversão</p>
+</dd>
+<dt class="field-even">type seq</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return dna</dt>
+<dd class="field-odd"><p>Sequência de DNA</p>
+</dd>
+<dt class="field-even">rtype dna</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.seq_mais_prob">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">seq_mais_prob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista_seqs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pseudo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#seqmanpy.seq_mais_prob" title="Permalink to this definition"></a></dt>
+<dd><p>Funcao que recebe uma lista de sequencias com o mesmo tamanho, a pseudocontagem (pseudo) e uma sequencia maior. Esta funcao vai realizar
+um perfil pwm e descobrir de entre as sequências na lista de sequencias a mais provavel de ocorrer.</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">lista_seqs</dt>
+<dd class="field-odd"><p>Lista de sequências</p>
+</dd>
+<dt class="field-even">type lista_seqs</dt>
+<dd class="field-even"><p>List[str]</p>
+</dd>
+<dt class="field-odd">seq</dt>
+<dd class="field-odd"><p>Sequência DNA</p>
+</dd>
+<dt class="field-even">type seq</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+<dt class="field-odd">pseudo</dt>
+<dd class="field-odd"><p>Valor da pseudocontagem para o PWM (por omissão 0)</p>
+</dd>
+<dt class="field-even">type pseudo</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return seq_mais_provavel</dt>
+<dd class="field-odd"><p>Sequência mais provavel com base nos inputs</p>
+</dd>
+<dt class="field-even">rtype PWM</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="seqmanpy.validacao_dna">
+<span class="sig-prename descclassname"><span class="pre">seqmanpy.</span></span><span class="sig-name descname"><span class="pre">validacao_dna</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#seqmanpy.validacao_dna" title="Permalink to this definition"></a></dt>
+<dd><p>Recebe uma sequencia e valida-a como sendo de DNA (True) ou nao (False)</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">seq</dt>
+<dd class="field-odd"><p>Sequencia para validação</p>
+</dd>
+<dt class="field-even">type seq</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="field-list simple">
+<dt class="field-odd">return boolean</dt>
+<dd class="field-odd"><p>Validação da sequência</p>
+</dd>
+<dt class="field-even">rtype boolean</dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="final_submission" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Adriano Silva PG43176, Rui Gomes PG45970, Sérgio Mendes PG42486, Tiago Oliveira PG45476.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
