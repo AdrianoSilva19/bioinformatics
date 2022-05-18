@@ -1,0 +1,60 @@
+---
+title: "ficha_2"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+
+## Exercicio 1 A)
+### Ler os dados de treino e de teste para os dois dataframes
+#### Os	dados	de treino	estão	na	pasta	“train” no	ficheiro	“X_train.txt” e	os	dados	de	teste	estão	na pasta	“test” no	ficheiro	“X_test.txt”.
+
+## Ecercicio 1 b)	
+##Adicione	a	cada	um	destes	data	frames	duas colunas	contendo:
+##-os	 indivíduos	 que	 realizaram	 cada	 experiência (estes	 dados	 estão	 no	ficheiro	“subject_train.txt”	na	pasta	“train”	e	no	 ficheiro	“subject_test.txt”	na	pasta	“test”,	para	os	dados	de	treino	e	teste	respetivamente)
+#### Subir á mão os dataset
+```{r}
+
+X_train["Subjects"] <- subject_train
+X_test["Subjects"] <- subject_test
+
+X_train["Classes"] <- y_train
+X_test["Classes"] <- y_test
+
+
+```
+
+## Exercicio 1 c) 
+## Junte	 os	 data	 frames	 de	 treino	 e	 teste	 num	 único	 (note	 que	 as	 colunas	 de	ambos	são	iguais	pelo	que	apenas	tem	que	juntar	as	linhas)
+
+```{r}
+
+data_frame <- rbind(X_train,X_test)
+data_frame
+
+```
+
+
+##Exercício	2 A)	
+###a)	 Colocar	 como	 nomes	 das	 colunas	 do	 data	 frame	 anterior	 os	 nomes	apropriados:	 
+#-a	 coluna	 do	 individuo	 deve	 ter	 o	 nome	 “Subject”;	 
+#-a	 coluna	 da	atividade	 deve	 ter	 o	 nome	 de	 “Activity”;	 
+#-as	 restantes	 561	 colunas	 com	 os	atributos	devem	ter	os	nomes	dados	pelo	ficheiro	“features.txt”.
+
+```{r}
+colnames(data_frame)[which(names(data_frame) == "Subjects")] <- "Subject"
+colnames(data_frame)[which(names(data_frame) == "Classes")] <- "Activity"
+colnames(data_frame) = c(as.vector(features[, 1]), "Subject", "Activity")
+colnames(data_frame)
+```
+
+## Exercicio 2 B)
+### A	 coluna	 “Activity”	 tem	 um	 código	 para	 representar	 as	 atividades. O significado	destes	códigos	é	dado	pelo	ficheiro	“activity_labels.txt”.	Substitua	esta	coluna	 por	 um	 vector	 de	 fatores	 considerando	 os	 níveis	 dados	 pelo	 ficheiro,	atribuindo	a	cada	nível	o	descritivo	indicado.
+
+```{r}
+for (i in 1:length(activity_labels$V2)){
+  df['Activity'][df['Activity'] == i] <- as.vector(activity_labels[i, "V2"])
+}
+
+```

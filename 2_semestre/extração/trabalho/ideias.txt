@@ -1,0 +1,3 @@
+classificação ou regressão:
+- analisar qual das duas abordagens faz mais sentido aplicada no nosso dataset
+- saber explicar pq é que usamos um certo algoritmo

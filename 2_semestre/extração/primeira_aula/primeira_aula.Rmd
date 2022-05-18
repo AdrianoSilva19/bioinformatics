@@ -1,0 +1,150 @@
+---
+title: "Ficha 1"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+
+```
+
+
+
+
+```{r}
+data_frame=CO2
+help("CO2")
+data_frame  
+
+
+```
+```{r}
+dim(data_frame)
+plant_chilled=sum(data_frame$Treatment=="chilled")
+plant_chilled
+data_frame%>% select(Plant, Type, Treatment, conc, uptake) %>% filter(Type == "Quebec")
+
+```
+```{r}
+#D)
+help("matrix")
+namescolunas = c("identificação","consent", "consumo")
+matriz = data_frame%>% select(Plant,conc, uptake)
+colnames(matriz) = namescolunas
+as.matrix(matriz)
+
+```
+
+```{r}
+# E)
+
+matriz %>% filter(identificação=='Mc3')
+
+
+```
+
+```{r}
+#F)
+vetor_consumo = matriz$consumo
+vetor_consumo
+
+```
+
+```{r}
+#G)
+
+data_frame$uptake[data_frame$Plant=="Qc3"& data_frame$conc==675]*1000
+
+
+```
+```{r}
+#H)
+max(data_frame$uptake)
+data_frame[data_frame$uptake == max(data_frame$uptake),]
+
+```
+```{r}
+#I)
+mean(data_frame[data_frame$Type=='Mississippi' & data_frame$Treatment=='chilled',]$uptake)
+
+```
+```{r}
+#J)
+boxplot(data_frame$uptake~data_frame$Type,xlab = 'plant',ylab = 'uptake')
+
+```
+
+```{r}
+#K)
+plot(data_frame$uptake~data_frame$conc,xlab = 'conc',ylab = 'uptake',col=data_frame$Treatment)
+
+
+```
+```{r}
+#L)
+barplot(tapply(data_frame$uptake,data_frame$Type,mean))
+
+```
+
+```{r}
+# Aline 2
+#A)
+help("chickwts")
+data("chickwts")
+names(chickwts)
+lapply(chickwts,class)
+dim(chickwts)
+
+```
+```{r}
+#B)
+table(is.na(chickwts))
+
+```
+
+```{r}
+#C)
+summary(chickwts)
+
+```
+```{r}
+#D)
+tapply(chickwts$weight,chickwts$feed,mean)
+
+```
+```{r}
+#F)
+hist(chickwts$weight,breaks = c(100,200,300,400,500),col = 7)
+
+```
+
+```{r}
+#G)
+boxplot(chickwts$weight~chickwts$feed,xlab = 'feed',ylab = 'wheight')
+
+
+```
+
+```{r}
+#Exercicio 3
+library(QSARdata)
+data(MeltingPoint)
+is.data.frame(MP_Descriptors)
+dim(MP_Descriptors)
+class(MP_Data)
+class(MP_Outcome)
+class(MP_Descriptors)
+
+length(MP_Data)
+length(MP_Outcome)
+
+```
+```{r}
+#B
+sum(is.na(MP_Descriptors))
+
+#C
+help("scale")
+MP_normalizado=scale(MP_Descriptors)
+
+```

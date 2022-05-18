@@ -1,0 +1,2 @@
+"0","cachexia.log = cachexia %>% select(-Muscle.loss) %>% log2 %>% mutate(meta_cachexia)"
+"0",""

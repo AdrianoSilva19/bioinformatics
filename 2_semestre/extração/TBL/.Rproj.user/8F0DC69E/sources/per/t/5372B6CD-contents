@@ -1,0 +1,121 @@
+---
+title: "TBL"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## librarias necessárias usar
+```{r}
+library(car)
+library(dplyr)
+library(purrr)
+
+```
+
+
+## carregar de dados da cachexia
+
+```{r}
+meta_cachexia = read.table("http://darwin.di.uminho.pt/dataAnalysisR/meta_cachexia.csv", sep = ",", header = T, row.names = 1)
+cachexia = read.table("http://darwin.di.uminho.pt/dataAnalysisR/cachexia.csv", sep = ",", header = T, row.names = 1)
+cachexia = cbind(cachexia, meta_cachexia)
+
+```
+
+
+```{r}
+cachexia.log = cachexia %>% select(-Muscle.loss) %>% log2 %>% mutate(meta_cachexia)
+
+```
+
+```{r}
+pv.orig = cachexia %>% select(-Muscle.loss) %>% map(~ shapiro.test(.x)$p.value) %>% unlist
+sum(pv.orig < 0.05)
+pv.log = cachexia.log %>% select(-Muscle.loss) %>% map(~ shapiro.test(.x)$p.value) %>% unlist
+sum(pv.log < 0.05)
+colnames(cachexia.log)[which(pv.log < 0.05)]
+```
+### shapiro test, normalização dos dados, rejeitar a hipotese H0 aquela em que os dados são "normais"
+
+```{r}
+pv_origin.bh = p.adjust(pv.orig, "bonferroni")
+sum(pv_origin.bh < 0.05)
+pv_log.bh = p.adjust(pv.log, "bonferroni")
+sum(pv_log.bh < 0.05)
+
+
+```
+
+## Exercicio 2
+
+```{r}
+genes = cachexia %>% select(-Muscle.loss)
+pvs = genes %>% map_dbl(~ pairwise.t.test(.x, g = cachexia$Muscle.loss)$p.value)
+names(pvs) = names(genes)
+pvs = pvs[pvs < 0.05]
+pvs = pvs[order(pvs)]
+length(pvs)
+names(pvs)
+```
+
+```{r}
+boxplot(genes)
+
+```
+
+
+# Exercicio 3
+
+### tabela de correlação, estamos interessados nos que têm maior correlação
+### as ligações são as de maior semelhança (correlação)
+
+```{r}
+rank = names(pvs)[1:10]
+
+C = round(cor(cachexia[,rank]), 2)
+gene.names = C %>% rownames
+which(C > 0.7, arr.ind = TRUE) %>% as_tibble %>% filter(row != col) %>% apply(2, function(x) gene.names[x])
+heatmap(C, col = hcl.colors(20, palette = "viridis"))
+```
+
+
+## Pergunta 4
+
+#### QQ - necessario fazer teste normalizado aos residuos, shapiro, mas em principio não é normal
+#### ln ao passar o data temos o nome dos genes no grafico
+#### o histograma tem muitas ondas, não é uma normal, mas em principio deveriam seguir
+#### o p-value do intersept não está abaixo do 0,05, provavelmente não há interseção no primeiro
+
+#### para o segundo tbm não são normais, nem existe interseção
+
+```{r}
+lm1= lm(Leucine ~ Valine, data = cachexia)
+lm2= lm(Leucine ~ Valine + X3.Hydroxybutyrate, data = cachexia)
+lm3= lm(Leucine ~ Valine * X3.Hydroxybutyrate, data = cachexia)
+
+for(Fit in list(lm1, lm2, lm3)) {
+  Fit %>% plot(which = 2)
+  print("Residuos")
+  residuos = Fit %>% residuals 
+  print(residuos %>% summary)
+  residuos %>% hist(breaks = 20, prob = T)
+  residuos %>% density %>% lines
+  print(Fit %>% summary)
+}
+```
+
+#### fazer modelo com interaçãoo do mass-loss
+
+## Pergunta 5
+
+#### fazer teste de shapiro para os modelos de cima, apenas a valina é que faz diferença
+#### fazer valina e x3 sem a interseção, o r square aumenta muito
+#### ver o outlier, existe um significativo, voltar a correr o modelo sem o outlier
+#### cross validation para ver se está tudo bem, para observar se mantemos o R quadrado do mesmo nivel
+#### pegar em dados de novos pacientes para ver se resulta, reordenar os nossos dados pq não temos novos dados partir em 5 partes, usar 4 para fazer, repetir o processo com outros 4 até ter deixado de fora as 5 partes
+
+
+
+#              --------Fimmmm-----------

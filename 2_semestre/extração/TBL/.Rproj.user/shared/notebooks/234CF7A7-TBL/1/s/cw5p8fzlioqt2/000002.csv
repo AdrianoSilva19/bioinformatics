@@ -1,0 +1,4 @@
+"0","meta_cachexia = read.table(""http://darwin.di.uminho.pt/dataAnalysisR/meta_cachexia.csv"", sep = "","", header = T, row.names = 1)"
+"0","cachexia = read.table(""http://darwin.di.uminho.pt/dataAnalysisR/cachexia.csv"", sep = "","", header = T, row.names = 1)"
+"0","cachexia = cbind(cachexia, meta_cachexia)"
+"0",""
